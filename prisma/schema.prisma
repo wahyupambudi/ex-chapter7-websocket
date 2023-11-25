@@ -19,7 +19,8 @@ enum role {
 model User {
   id           Int      @id @default(autoincrement())
   name         String
-  phoneNumber  String
-  role         role @default(user) // You can change this to an enum if needed
   email        String   @unique
+  phoneNumber  String
+  password     String
+  role         role @default(user) // You can change this to an enum if needed
 }
